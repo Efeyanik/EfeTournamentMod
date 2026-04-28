@@ -1,4 +1,6 @@
-﻿using TaleWorlds.MountAndBlade;
+﻿using System;
+using System.IO;
+using TaleWorlds.MountAndBlade;
 using HarmonyLib;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
@@ -7,22 +9,35 @@ namespace EfeTournamentMod
 {
     public class Main : MBSubModuleBase
     {
-        // 1. Aşama: Mod yüklenirken (arkaplanda) Harmony'i başlatıyoruz. Burası en güvenli yer.
+        // Modun arka planda yüklenmeye başladığı ilk an
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
 
-            Harmony harmony = new Harmony("com.efeyanik.tournamentmod");
-            harmony.PatchAll();
+            try
+            {
+                // Projen için benzersiz bir Harmony ID'si oluşturuyoruz
+                var harmony = new Harmony("com.efeyanik.tournamentmod.patch");
+
+                // TournamentRewardPatch dahil tüm patch'leri otomatik olarak uygular
+                harmony.PatchAll();
+            }
+            catch (Exception ex)
+            {
+                // Runtime'da bir çökme olursa log dosyasını masaüstüne yazdır
+             
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string logFile = Path.Combine(desktopPath, "Mod_Hata_Log.txt");
+                File.WriteAllText(logFile, "Harmony Yukleme Hatasi:\n\n" + ex.ToString());
+            }
         }
 
-        // 2. Aşama: Ana menü ekranı yüklenip karşımıza gelmeden hemen önceki an.
+        
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
             base.OnBeforeInitialModuleScreenSetAsRoot();
 
-            // UI artık hazır olduğu için mesajımızı buraya koyuyoruz.
-            InformationManager.DisplayMessage(new InformationMessage("Efe'nin Turnuva Modu basariyla yuklendi!", Colors.Green));
+            
         }
     }
 }
