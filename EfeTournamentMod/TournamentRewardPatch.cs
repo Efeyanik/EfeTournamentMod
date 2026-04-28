@@ -32,7 +32,7 @@ namespace EfeTournamentMod
 
                     
                     InformationManager.DisplayMessage(new InformationMessage(
-                        $"Zorlu arenada {lordCount} soyluyu alt ettin! Yan bahislerden {bonusGold} altin kazandin.",
+                        $"You defeated the noble {lordCount} in the challenging arena! You won {bonusGold} gold from the side bets.",
                         Colors.Green));
                 }
             }
