@@ -22,7 +22,7 @@ namespace EfeTournamentMod
                 int lordCount = participants.Count(p => p.IsHero && !p.IsPlayerCharacter);
 
                 
-                if (lordCount >= 3)
+                if (lordCount >= 1)
                 {
                     
                     int bonusGold = lordCount * 1000;

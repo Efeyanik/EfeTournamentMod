@@ -16,7 +16,7 @@ namespace EfeTournamentMod
 
             try
             {
-                // Projen için benzersiz bir Harmony ID'si oluşturuyoruz
+                // Proje için benzersiz bir Harmony ID'si oluşturuyoruz
                 var harmony = new Harmony("com.efeyanik.tournamentmod.patch");
 
                 // TournamentRewardPatch dahil tüm patch'leri otomatik olarak uygular
