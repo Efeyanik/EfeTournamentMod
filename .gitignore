@@ -1,9 +1,8 @@
-# Derleme klasörleri
-bin/
 obj/
-# TaleWorlds oyun dosyaları 
-*.dll
-*.pdb
-!EfeTournamentMod.dll
+
+
+
+
+
 
 .vs/

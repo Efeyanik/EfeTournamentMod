@@ -1,0 +1,54 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "EfeTournamentMod/1.0.0": {
+        "dependencies": {
+          "TaleWorlds.DotNet": "1.0.0.0",
+          "TaleWorlds.ObjectSystem": "1.0.0.0"
+        },
+        "runtime": {
+          "EfeTournamentMod.dll": {}
+        }
+      },
+      "TaleWorlds.DotNet/1.0.0.0": {
+        "runtime": {
+          "TaleWorlds.DotNet.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TaleWorlds.ObjectSystem/1.0.0.0": {
+        "runtime": {
+          "TaleWorlds.ObjectSystem.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EfeTournamentMod/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaleWorlds.DotNet/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaleWorlds.ObjectSystem/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
