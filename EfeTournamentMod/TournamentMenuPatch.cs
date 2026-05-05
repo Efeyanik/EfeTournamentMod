@@ -5,6 +5,7 @@ using TaleWorlds.CampaignSystem.TournamentGames;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.CampaignSystem.Settlements;
+using TaleWorlds.MountAndBlade;
 
 namespace EfeTournamentMod
 {
@@ -62,4 +63,10 @@ namespace EfeTournamentMod
             Campaign.Current.TournamentManager.OnPlayerJoinTournament(tournamentGame.GetType(), Settlement.CurrentSettlement);
         }
     }
+
+        
+    
+
+
+
 }
